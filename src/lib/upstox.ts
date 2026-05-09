@@ -16,7 +16,7 @@ function getConfig(): UpstoxConfig {
   return {
     apiKey: process.env.UPSTOX_API_KEY || "",
     apiSecret: process.env.UPSTOX_API_SECRET || "",
-    redirectUri: process.env.UPSTOX_REDIRECT_URI || "https://vestroai.com",
+    redirectUri: process.env.UPSTOX_REDIRECT_URI || "https://vestroai.com/api/token/callback",
   };
 }
 
