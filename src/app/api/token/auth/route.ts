@@ -25,8 +25,8 @@ export async function POST(req: NextRequest) {
       success: true,
       data: {
         access_token: tokens.access_token,
-        refresh_token: tokens.refresh_token,
-        expires_in: tokens.expires_in,
+        refresh_token: (tokens as any).refresh_token || null,
+        expires_in: (tokens as any).expires_in || null,
       },
     });
   } catch (error: any) {
